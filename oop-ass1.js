@@ -60,10 +60,33 @@ function NotesApplication(author,notes){
 			console.log("no content matches id " + note_id);
 		}
 	};
-	/*this.search = function(search_text){
-		
-	};*/
+	this.search = function(search_text){
+		this.search_text = search_text;
+		var keywords = search_text.split(" ");
+		var notesArrContains = [];
+		var notesFound = false;
+		while (notesFound === false){
+			for (var i=0; i<this.notes.length; i++){
+				for (var j=0; j<keywords.length; j++){
+				    if(this.notes[i].includes(keywords[j])){
+					    if (notesArrContains.includes(this.notes[i])){
+					    	notesArrContains;
+					    }
+					    else{
+						    notesArrContains.push(this.notes[i]);
+				    	}
+				    }
+					else if (j===keywords.length){
+						break;
+					}
+					
+				}
+			notesFound = true;
+			}
+		}
+		return notesArrContains;
+	};
 }
 
-var apps = new NotesApplication("Ahmad",['football','basketball','judo','chess','scrabble']);
-apps.edit(4, 'baby');
+var apps = new NotesApplication("Ahmad",['football and judo ','basketball','judo','chess','scrabble']);
+apps.search('I love judo and monopoly');
