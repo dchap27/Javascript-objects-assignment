@@ -8,9 +8,13 @@ function NotesApplication(author,notes){
 		};
 	this.listNotes = function(){
 		for (var i=0; i<this.notes.length; i++){
-					pos=this.notes.indexOf(notes[i]);
-					console.log("[Notes ID]:" + "["+ pos +"]" +"\n"+ notes[i]+ "\n"+ "By author: "+ this.author);
-					//console.log(notes[i] + pos);
+					note_id=this.notes.indexOf(notes[i]);
+					console.log("[Notes ID]:" + "["+ note_id +"]" +"\n"+ notes[i]+ "\n"+ "By author: "+ this.author);
 			}
+	};
+	this.getNote = function(note_id){
+		this.note_id = note_id;
+		var contents = this.notes[this.note_id];
+		return contents;
 	};
 }
