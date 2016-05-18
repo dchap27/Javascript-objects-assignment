@@ -30,3 +30,4 @@ function NotesApplication(author,notes){
 	};
 }
 
+var app = new NotesApplication("Ahmad",['football','basketball','judo','chess','scrabble']);
