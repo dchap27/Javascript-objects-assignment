@@ -71,17 +71,17 @@ NotesApplication.prototype.edit = function(note_id,new_content){
 NotesApplication.prototype.search = function(search_text){
 		this.search_text = search_text;
 		var keywords = search_text.split(" ");
-		var notesArrContains = [];
+		var searchResult = [];
 		var notesFound = false;
 		while (notesFound === false){
 			for (var i=0; i<this.notes.length; i++){
 				for (var j=0; j<keywords.length; j++){
 				    if(this.notes[i].includes(keywords[j])){
-					    if (notesArrContains.includes(this.notes[i])){
-					    	notesArrContains;
+					    if (searchResult.includes(this.notes[i])){
+					    	searchResult;
 					    }
 					    else{
-						    notesArrContains.push(this.notes[i]);
+						    searchResult.push(this.notes[i]);
 				    	}
 				    }
 					else if (j===keywords.length){
@@ -92,5 +92,5 @@ NotesApplication.prototype.search = function(search_text){
 			notesFound = true;
 			}
 		}
-		return notesArrContains;
+		return searchResult;
 	};
