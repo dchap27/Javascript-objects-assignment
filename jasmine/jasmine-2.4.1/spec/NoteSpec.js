@@ -51,6 +51,15 @@ describe("noteApp", function() {
             expect(typeof(noteApp.listNotes())).toBe("object");
 		});
 		
+		it("should be able to get a particular note", function() {
+            var note_id = 0;
+            expect(noteApp.getNote(note_id)).toEqual('books');
+		});
+
+		it("should have a getNote that returns error when no index match", function() {
+			var note_id = 4;
+			expect(noteApp.getNote(note_id)).toEqual('no matching notes');
+		})
 	});
 
 });

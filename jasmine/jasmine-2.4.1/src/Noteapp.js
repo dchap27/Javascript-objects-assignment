@@ -30,6 +30,7 @@ NotesApplication.prototype.getNote = function(note_id){
 	}
 	else{
 		console.log("no content matches id " + note_id);
+		return "no matching notes";
 	}
 };
 
