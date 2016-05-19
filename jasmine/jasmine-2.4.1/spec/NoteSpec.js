@@ -13,8 +13,8 @@ describe("noteApp", function() {
     });
 
 
-	describe("Noteapp ",function(){
-	    it("should have an author", function(){
+	describe("Note Application ",function(){
+	    it("should have notes with an author", function(){
 	        var author = 'Ahmad';
 	        expect(noteApp.author).toEqual(author);
 	    
@@ -26,13 +26,13 @@ describe("noteApp", function() {
 	    });
 	});
 	 
-	describe("Noteapp ", function(){
+	describe("Notes Application ", function(){
 	    it("should have an array of notes ", function() {
             expect(typeof(noteApp.notes)).toBe("object");
 	   });
 	});
 
-	describe("Notes application ", function() {
+	describe("Notes create function ", function() {
 		it("should be able to create notes ", function() {
             var content = "a new content";
             expect(noteApp.create(content)).toEqual(['books','a new content']);
@@ -59,7 +59,16 @@ describe("noteApp", function() {
 		it("should have a getNote that returns error when no index match", function() {
 			var note_id = 4;
 			expect(noteApp.getNote(note_id)).toEqual('no matching notes');
-		})
+		});
+	});
+
+	describe("Notes Application variables ", function(){
+		it("must be defined",function(){
+			var author = "Ahmad";
+			var notes = ['rice'];
+            expect(noteApp.author).toBeDefined();
+            expect(noteApp.notes).toBeDefined();
+		});
 	});
 
 });
