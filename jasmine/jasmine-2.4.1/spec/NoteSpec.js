@@ -28,10 +28,9 @@ describe("noteApp", function() {
 	 
 	describe("Noteapp ", function(){
 	    it("should have an array of notes ", function() {
-	    	spyOn(noteApp, "notes");
-            noteApp.notes('Ata');
+            //noteApp.notes('Ata');
             //#expect(person.setName.calls.argsFor(0)).toBe("string");
-            expect(noteApp.notes.calls.all()).toBe("string");
+            expect(typeof(noteApp.notes)).toBe("object");
 	   });
 	});
 
