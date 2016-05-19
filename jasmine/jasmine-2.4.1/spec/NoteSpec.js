@@ -80,6 +80,14 @@ describe("noteApp", function() {
             expect(typeof(noteApp.deleteNote(note_id))).toBe('object');
 		});
 	});
+	describe("Edit function ", function() {
+		it("must return string", function() {
+			var notes = ['books'];
+			var new_content = "Games";
+			var note_id = 0;
+			expect(typeof(noteApp.edit(note_id,new_content))).toBe('string');
+		});
+	});
 
 
 });
