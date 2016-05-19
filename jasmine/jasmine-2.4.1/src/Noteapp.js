@@ -7,8 +7,8 @@ function NotesApplication(author,notes){
 
 NotesApplication.prototype.create = function(content) {
 	this.content=content;
-  this.notes.push(this.content);// adds new content to the list of notes
-  return this.notes;
+    this.notes.push(this.content);// adds new content to the list of notes
+    return this.notes;
 };
 
 NotesApplication.prototype.listNotes = function(){
