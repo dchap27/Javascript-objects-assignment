@@ -63,7 +63,7 @@ describe("noteApp", function() {
 	});
 
 	describe("Notes Application variables ", function(){
-		it("must be defined",function(){
+		it(" 'author' and 'notes' must be defined",function(){
 			var author = "Ahmad";
 			var notes = ['rice'];
             expect(noteApp.author).toBeDefined();
