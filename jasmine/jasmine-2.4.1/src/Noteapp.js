@@ -34,7 +34,7 @@ NotesApplication.prototype.getNote = function(note_id){
 	}
 };
 
-NotesApplication.prototype.delete = function(note_id){
+NotesApplication.prototype.deleteNote = function(note_id){
 	this.note_id = note_id;
 	var note_idArr = [];
 	for (var i=0; i<this.notes.length; i++){
@@ -42,7 +42,7 @@ NotesApplication.prototype.delete = function(note_id){
 		}
 	if (note_id in note_idArr){
 		//var deleted_content = this.notes[note_id];
-		this.notes.splice(this.notes.indexOf(notes[note_id]),note_id); // removes the notes with index "note_id"
+		this.notes.splice(this.notes.indexOf(this.notes[note_id]),note_id); // removes the notes with index "note_id"
 		console.log("content "+ note_id + " deleted successfully" + "\n");
 	    return (this.notes);// returns the new list of notes
 	}

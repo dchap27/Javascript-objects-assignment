@@ -7,9 +7,10 @@ describe("noteApp", function() {
     var noteApp;
 
 	beforeEach(function(){
-	    var author = author;
-	    var notes = notes;
+	    
 	 	noteApp = new NotesApplication(author,notes);
+	 	var author = author;
+	    var notes = notes;
     });
 
 
@@ -70,5 +71,15 @@ describe("noteApp", function() {
             expect(noteApp.notes).toBeDefined();
 		});
 	});
+
+	describe("Delete function ", function(){
+		it("must return objects", function() {
+			var notes = ['books'];
+			var note_id = 0;
+			//expect(noteApp.)
+            expect(typeof(noteApp.deleteNote(note_id))).toBe('object');
+		});
+	});
+
 
 });
