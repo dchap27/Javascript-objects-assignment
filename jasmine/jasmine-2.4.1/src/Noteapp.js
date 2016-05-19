@@ -16,6 +16,7 @@ NotesApplication.prototype.listNotes = function(){
 		var note_id=this.notes.indexOf(this.notes[i]); // gets the index number for each notes
 		console.log("[Notes ID]: " + note_id +"\n"+ this.notes[i]+ "\n"+ "By author: "+ this.author);
 	}
+	return this.notes;
 };
 
 NotesApplication.prototype.getNote = function(note_id){

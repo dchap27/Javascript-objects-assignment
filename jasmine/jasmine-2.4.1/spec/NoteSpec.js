@@ -28,8 +28,6 @@ describe("noteApp", function() {
 	 
 	describe("Noteapp ", function(){
 	    it("should have an array of notes ", function() {
-            //noteApp.notes('Ata');
-            //#expect(person.setName.calls.argsFor(0)).toBe("string");
             expect(typeof(noteApp.notes)).toBe("object");
 	   });
 	});
@@ -39,6 +37,20 @@ describe("noteApp", function() {
             var content = "a new content";
             expect(noteApp.create(content)).toEqual(['books','a new content']);
 		});
+
+		it("should return an object ", function() {
+			var content = "a new content";
+            expect(typeof(noteApp.create(content))).toBe("object");
+		});
+	});
+
+	describe("Notes application ", function() {
+		it("should have list notes function that returns object", function() {
+			var note_id = 0;
+			var notes = ['books'];
+            expect(typeof(noteApp.listNotes())).toBe("object");
+		});
+		
 	});
 
 });
